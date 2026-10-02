@@ -32,6 +32,12 @@ pnpm preview
 
 O build estático é gerado em `dist/`.
 
+## Publicação no GitHub Pages
+
+O projeto inclui o workflow `.github/workflows/deploy-pages.yml`. Depois de cada `git push` na branch `main`, o GitHub instala as dependências, executa `pnpm build` e publica automaticamente a pasta `dist/`.
+
+Endereço público: <https://tiodarwin.github.io/conversor-real/>
+
 ## Estrutura
 
 ```text
