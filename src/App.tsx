@@ -121,17 +121,24 @@ function App() {
 
   return (
     <div className="app-shell">
-      <div className="ambient ambient--one" aria-hidden="true" />
-      <div className="ambient ambient--two" aria-hidden="true" />
       <div className="page-container">
         <Header theme={theme} onToggleTheme={handleToggleTheme} />
 
         <main>
           <section className="hero-intro" aria-labelledby="page-title">
-            <div className="eyebrow"><span className="eyebrow-line" /> MERCADO EM UM OLHAR</div>
-            <h2 id="page-title">Seu dinheiro, <em>sem mistério.</em></h2>
-            <p>Uma forma simples e transparente de acompanhar o valor do real no mundo.</p>
-          </section>
+  <div className="eyebrow">
+    <span className="eyebrow-line" /> COTAÇÕES DE MOEDAS
+  </div>
+
+  <h2 id="page-title">
+    Converta reais com clareza.
+  </h2>
+
+  <p>
+    Consulte quanto um valor em reais representa em outras moedas.
+  </p>
+</section>
+
 
           <CurrencyForm
             value={inputValue}

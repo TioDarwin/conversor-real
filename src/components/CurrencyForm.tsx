@@ -22,11 +22,14 @@ export function CurrencyForm({
 }: CurrencyFormProps) {
   return (
     <section className="converter-panel" aria-labelledby="converter-title">
-      <div className="section-kicker"><span /> CONVERSÃO RÁPIDA</div>
+      <div className="section-kicker">
+  <span /> CONVERTER VALOR
+</div>
+
       <div className="form-heading-row">
         <div>
-          <h1 id="converter-title">Quanto vale o seu real hoje?</h1>
-          <p>Informe um valor e compare em cinco moedas de referência.</p>
+          <h1 id="converter-title">Converta seus reais</h1>
+<p>Veja o valor aproximado em cinco moedas de referência.</p>
         </div>
         <div className="form-orbit" aria-hidden="true"><ArrowUpRight size={20} /></div>
       </div>
@@ -59,10 +62,15 @@ export function CurrencyForm({
         </div>
         <button className="convert-button" type="submit" disabled={isLoading}>
           {isLoading ? <LoaderCircle className="spin" size={19} aria-hidden="true" /> : <ArrowUpRight size={19} aria-hidden="true" />}
-          <span>{isLoading ? 'Consultando…' : 'Converter agora'}</span>
+         <span>{isLoading ? 'Consultando…' : 'Consultar cotações'}</span>
+
         </button>
       </form>
-      <p className="form-footnote"><span className="secure-dot" aria-hidden="true" /> Sem cadastro, sem taxas escondidas.</p>
+      <p className="form-footnote">
+  <span className="secure-dot" aria-hidden="true" />
+  Consulta pública de referência, sem cadastro.
+</p>
+
     </section>
   )
 }

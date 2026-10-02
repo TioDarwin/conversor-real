@@ -208,6 +208,127 @@ button:disabled { cursor: not-allowed; }
   .trust-divider { width: 28px; height: 1px; }
   .site-footer { align-items: start; flex-direction: column; padding-bottom: 20px; }
 }
+/* Identidade visual mais simples e institucional */
+
+:root:not(.dark) {
+  --brand: #0f766e;
+  --brand-deep: #0b5f59;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
+  --surface-soft: #f5f7f6;
+  --line: #dce5e2;
+  --shadow: 0 10px 28px rgba(24, 50, 45, 0.08);
+  --shadow-small: 0 4px 14px rgba(24, 50, 45, 0.07);
+}
+
+:root.dark {
+  --brand: #5eead4;
+  --brand-deep: #2dd4bf;
+  --surface: #1f2a29;
+  --surface-strong: #243331;
+  --surface-soft: #17211f;
+  --line: rgba(180, 220, 211, 0.18);
+  --shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  --shadow-small: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+.app-shell {
+  background: var(--surface-soft);
+}
+
+.app-shell::before,
+.ambient,
+.converter-panel::after,
+.empty-results__line {
+  display: none;
+}
+
+.brand-mark {
+  background: var(--brand);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.live-pill {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.hero-intro h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.04em;
+}
+
+.converter-panel {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: none;
+}
+
+.form-orbit {
+  transform: none;
+  border-radius: 8px;
+}
+
+.convert-button {
+  background: var(--brand);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.convert-button:hover:not(:disabled),
+.convert-button:focus-visible {
+  background: var(--brand-deep);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 20%, transparent);
+  transform: none;
+}
+
+.currency-card {
+  border-radius: 12px;
+  box-shadow: var(--shadow-small);
+}
+
+.currency-card::before {
+  display: none;
+}
+
+.currency-card:hover {
+  box-shadow: var(--shadow-small);
+  transform: translateY(-2px);
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.footer-author {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.footer-author strong {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+@media (max-width: 620px) {
+  .hero-intro h2 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+
+  .footer-meta {
+    width: 100%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

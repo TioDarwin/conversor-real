@@ -1,4 +1,4 @@
-import { ArrowRightLeft, Sparkles } from 'lucide-react'
+import { ArrowRightLeft } from 'lucide-react'
 import type { Theme } from '../types'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -14,18 +14,28 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         <div className="brand-mark" aria-hidden="true">
           <ArrowRightLeft size={21} strokeWidth={2.5} />
         </div>
+
         <div>
-          <div className="brand-name">Conversor <span>Real</span></div>
-          <p className="brand-description">Consulte o valor do real em moedas estrangeiras</p>
+          <div className="brand-name">
+            Conversor <span>Real</span>
+          </div>
+
+          <p className="brand-description">
+            Consulte o valor do real em moedas estrangeiras
+          </p>
         </div>
       </div>
+
       <div className="header-actions">
-        <div className="live-pill" aria-label="Cotação online">
+        <div className="live-pill" aria-label="Cotações online">
           <span className="live-dot" aria-hidden="true" />
-          <span className="hidden sm:inline">Cotação online</span>
-          <Sparkles size={14} aria-hidden="true" />
+          <span className="hidden sm:inline">Cotações online</span>
         </div>
-        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
+
+        <ThemeToggle
+          theme={theme}
+          onToggle={onToggleTheme}
+        />
       </div>
     </header>
   )
